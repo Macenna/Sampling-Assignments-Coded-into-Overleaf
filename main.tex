@@ -1,0 +1,318 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\addtolength{\oddsidemargin}{-.875in}
+	\addtolength{\evensidemargin}{-.875in}
+	\addtolength{\textwidth}{1.75in}
+
+	\addtolength{\topmargin}{-.875in}
+	\addtolength{\textheight}{1.75in}
+	
+\title{Sampling HW 4}
+\author{Macenna Cowen }
+\date{November 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{5.10}
+A forester wants to estimate the total number of farm acres planted with trees for a state. Because the number of acres of trees varies considerably with the size of the farm, he decides to stratify on farm sizes. The 240 farms in the state are placed in one of four categories according to size. A stratified random sample of 40 farms, selected by using proportional allocation, yields the results shown in the accompanying table on number of acres planted in trees. Estimate the total number of acres of trees on farms in the state, and place a bound on the error of estimation. Graph the data on an appropriate plot and comment on the variation as we move from I to IV. \\
+
+\medskip
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    Stratum 1 & Stratum 2 & Stratum 3 & Stratum 4 \\
+    0-200 Acres & 200-400 Acres & 400-600 Acres & over 600 Acres \\
+    \hline
+    N_1 = 86 & N_2 = 72 & N_3 = 52 & N_4 = 30 \\
+    n_1 = 14 & n_2 = 12 & n_3 = 9 & n_4 = 5 \\
+    \hline
+    97 & 125 & 142 & 167 \\
+    42 & 67 & 310 & 220 \\
+    25 & 256 & 495 & 780 \\
+    105 & 310 & 320 & 655 \\
+    27 & 220 & 196 & 540 \\
+    45 & 142 & 256 & \\
+    53 & 155 & 440 & \\
+    67 & 96 & 510 & \\
+    125 & 47 & 396 & \\
+    92 & 236 &  & \\
+    86 & 352 & & \\
+    43 & 190 & & \\
+    59 & & & \\
+    21 & & & \\
+    \hline
+    \bar{y} = 63.36 & \bar{y} = 183 & \bar{y} = 340.56 & \bar{y} = 472.4 \\
+    \hline
+    s_1 = 32.738 & s_2 = 95.154 & s_3 = 129.593 & s_4 = 269.029 \\
+    \hline
+    
+\end{tabular}
+\end{center}
+
+\medskip
+
+\begin{center}
+Estimating the total amount of trees in the total farm area: 
+$\tau$ = N\bar{y_{st}} = N$_1$\bar{y_1} + N$_2$\bar{y_2} + N$_3$\bar{y_3} + N$_4$\bar{y_4}\\
+$\tau$ = 86(63.36) + 72(183) + 52(340.56) + 30(472.4) \\
+$\tau$ = 50506.1 \\
+Therefore, there are 50506 total trees planted in the farm area. \\
+
+\end{center}
+
+\midskip
+
+\begin{center}
+Estimating the bound on the error of estimation: 
+\begin{equation}
+\hat{V} (N\bar{y_{st}}) = N^{2} \hat{V} (\bar{y_{st}}) = {\sum^{L}_{i=1}} {N^{2}_{i}} (1 - \frac{n_{i}}{N_{i}}) (\frac{s_{i}^2}{n_i}) \hspace{1cm} where, \hspace{.5cm} s_{i}^2 = \frac{1}{N_i - 1} \sum^{N_i}_{j=1} (y_ij - \bar{y_i})^2 \\
+\end{equation}
+
+$\hat{V} (N\bar{y_{1}}) = (86)^2 (1 - \frac{14}{86}) (\frac{32.738^2}{14}) = 474035.5$ \\
+
+$\hat{V} (N\bar{y_{2}}) = (72)^{2} (1 - \frac{12}{72}) (\frac{95.1535^2}{12}) = 3259505$\\
+
+$\hat{V} (N\bar{y_{3}}) = (52)^2 (1 - \frac{9}{52}) (\frac{129.5927^2}{9}) = 4172445$\\
+
+$\hat{V} (N\bar{y_{4}}) = (30)^2 (1 - \frac{5}{30}) (\frac{269.0284^2}{5}) = 10856445$\\
+
+$=(474035.5 + 3259505 + 4172445 + 10856445)$ \\
+$\hat{V} (N\bar{y_{st}}) = 18,762,431 $\\
+
+\smallskip
+Error Bound: $B = 2\sqrt{\hat{V} (N\bar{y_{st}})}$ \\
+$B = 2*\sqrt{18762431} = 8663.124 $ \\
+\smallskip
+Therefore, the total number of trees is estimated to be 50506. Accounting for error, the range of total trees within the error bound B of 8663.124, is between 41842 and 59169 total trees. 
+\end{center}
+
+\medskip
+\section{5.30}
+Wage earners in a large firm are stratified into management and clerical classes, the first having 300 and the second having 500 employees. To assess attitude on sick-leave policy, independent random samples of 100 workers each were selected, one sample from each of the classes. After the sample data were collected, the responses were divided according to gender. In the table of results, a = Number who like the policy; b = Number who dislike the policy; and c = Number who have no opinion on the policy. 
+
+\medskip
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    Strata & Management & Clerical & Total \\
+     & N_1 = 300 & N_2 = 500 & N = 800 \\
+     \hline
+     Male & a = 60 & a = 24 & 110 \\
+      & b = 15 & b = 4 & \\
+      & c = 5 & c = 2 & \\
+     \hline
+     Female & a = 10 & a = 42 & 90 \\
+      & b = 7 & b = 20 & \\
+      & c = 3 & c = 8 & \\
+     \hline
+     Total & n_1 = 100 & n_2 = 100 & n = 200 \\
+     \hline
+\end{tabular}
+\end{center}
+
+Find an estimate and an estimated variance of that estimate for each parameter listed: \\
+\\
+\medskip
+a. Proportion of managers who like the policy. \\
+There are 60 males and 10 females out of 100 managers. The proportion of managers who like the policy is 70. 
+\begin{center}
+$\hat{p} = \frac{70}{100} = \hat{p} = .70 $\\
+\text{Therefore, the proportion of managers who like the policy is 70\%.}
+\end{center}
+The variance of the proportion of managers who like the policy is: 
+\begin{equation}
+    \hat{V}(\hat{p_{st}}) = (1 - \frac{n}{N}) (\frac{\hat{p} \hat{q}}{n - 1}) \hspace{.5cm} where,  \hat{q} = 1 - \hat{p} \\
+\end{equation}
+\begin{center}
+    $V(\hat{p}) = (1- \frac{100}{300}) (\frac{.7(1-.7)}{100-1}) = .001414141 $
+\end{center}
+\medskip
+b. Proportion of wage earners who like the policy. \\
+There are 70 managers and 66 clerical employees who like the policy. The total number of employees is 136 out of 200 employees. 
+\begin{equation}
+    \hat{p_{st}} = \frac{1}{N} (N_1*\hat{p_1} + N_2*\hat{p_2})
+\end{equation}
+\begin{center}
+    $\hat{p_{st}} = \frac{1}{800}*(300*.70 + 500*.66) = .675 $ \\
+    Therefore, the estimated proportion of wage earners who like the policy is 67.5\%.
+\end{center}
+The variance of proportion of wage earners who like the policy is: 
+\begin{equation}
+    \hat{V}(\hat{p_{st}}) = \frac{1}{N^2} \sum^L_{i=1} N^2_i (1- \frac{n_i}{N_i})(\frac{\hat{p_i} \hat{q_i}}{n_i - 1})
+\end{equation}
+\begin{center}
+    $v(\hat{p_{st}}) = \frac{1}{800^2} [(300^2*(1- \frac{100}{300}) (\frac{.70(1-.7)}{100-1}) + (500^2 (1- \frac{100}{500})(\frac{.66(1-.66)}{100-1}))] = .0009072 $
+\end{center}
+\medskip
+c. Total number of female wage earners who dislike the policy. \\
+There are 7 female managers and 20 female clerics who dislike the policy. The total number of female wage earners out of 90 females is 27. \\
+\begin{center}
+    $\hat{p_{st}} = \frac{1}{800} (300*(\frac{7}{100}) + 500*(\frac{20}{100})) = 800(.15125) = 121 $ \\
+    \smallskip
+    Therefore, the total of female wage earners who dislike the policy is 121 females. 
+\end{center}
+The variance of the proportion of females who dislike the policy is: 
+\begin{center}
+    $\hat{V}(\hat{\tau}) = [(300^2(1- \frac{100}{300})*(\frac{.07(1-.07)}{100-1})) + (500^2(1- \frac{100}{500})(\frac{.2(1-.2)}{100-1}))] = 362.6869 $ \\
+\end{center}
+\begin{center}
+    $B = 2\sqrt{(\hat{V(\hat{\tau}))}} = 2\sqrt{362.6869} = 38.0887 \hspace{.5cm} EB = (324.60, 400.78) \approx (325, 401)$ \\
+    \smallskip
+    Meaning, based on the estimation, between 325 and 401 female wage earners dislike the policy. \\
+\end{center}
+
+\medskip
+d. Difference between the proportion of male managers who like the policy and the proportion of female managers who like the policy. \\
+There are 240 total male managers, 80 of them being in favor of the policy. As for females, there are 60 total female managers in the sample, with 20 in favor of the policy. The proportions are: \\
+\begin{center}
+    $\hat{p_{Male}} = \frac{80}{240} = .33 \hspace{1cm} \hat{p_{Female}} = \frac{20}{60} = .33 $\\
+    The proportion of male managers who like the policy is 33\%. The proportion of female managers who like the policy is 33\%. \\
+    The difference between the proportions is: \\
+    \smallskip
+    $\hat{p_M} - \hat{p_F} = .33 - .33 = 0$ \\
+    The difference between male and female managers who like the policy is 0\%, they all hate the policy equally. 
+\end{center}
+\text {The variance of difference between the proportion of managers who like the policy is:} \\
+\begin{center}
+    $\hat{V}(\hat{p_M}) = (1-\frac{80}{240})(\frac{.33(1-.33)}{240-1}) = .0006174 \hspace{1cm} \hat{V}(\hat{p_F}) = (1-\frac{20}{60})(\frac{.33(1-.33)}{60-1}) = .002498 $ \\
+    \smallskip
+    $\hat{V_D} = \hat{V}(\hat{p_F}) - (\hat{p_M}) = .002498 - .0006174 = .00188126 $ \\
+    \smallskip
+    $B = 2\sqrt{.00188126} = .08674707 \hspace{1cm} EB = (-.09, .09) $ \\ 
+    \smallskip
+    Meaning, although there is 0\% difference between the proportion of male and female managers who like the policy based on the estimate, that percentage could be off by 9\%. 
+\end{center}
+\medskip
+e. Difference between the proportion of managers who like the policy and the proportion of managers who dislike the policy. \\
+\text{Out of the 20 female managers sampled, 10 like the policy and 7 dislike the policy (3 are indifferent). Out of the 80 male managers sampled, 60 like the policy and 15 dislike the policy (5 are indifferent).} \\
+\begin{center}
+    $\hat{p_L} = \frac{60+10}{100} = \frac{70}{100} = .70 \hspace{1cm} \hat{p_D} = \frac{15+7}{200} = \frac{22}{200} = .22 $ \\
+    \smallskip
+    $\hat{p_L} - \hat{p_D} = .70-.22 = .48 $\\
+    70\% of managers like the policy and 22\% of managers dislike the policy. The difference of the proportion of managers who like versus dislike the policy is 48\%. 
+\end{center}
+The variance of difference between managers who like and dislike the policy is: 
+\begin{equation}
+    \hat{V}(\hat{p_{st}}) = (1 - \frac{n}{N}) (\frac{\hat{p} \hat{q}}{n - 1}) \\
+\end{equation}
+
+\begin{center}
+    
+    $\hat{V}(\hat{p_L}) = (1-\frac{100}{300}) (\frac{.70(1-.70)}{100-1}) = .001414 \\
+    \hat{V}(\hat{p_D}) = (1-\frac{100}{300}) (\frac{.22(1-.22)}{100-1}) = .001156  \\
+    \hat{V}(\hat{p_L}-\hat{p_D}) = .001156 + .001414 = .00257 $\\
+\end{center}
+
+\section{5.32}
+In the same survey discussed in 5.31, the respondents were asked for the longest continuous time (in hours) of administering anesthesia without a break over the last six months. A summary of the results is as follows: \\
+
+\begin{center}
+    
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Job & Mean & SD* & Sample Size & \hat{p}\\
+    \hline
+    Anesthesiologist & 7.63 & .15 & 1347 & .5 \\
+    Anesthesiology Resident & 7.74 & .35 & 163 & .1 \\
+    Nurse Anesthetist & 6.55 & .11 & 1095 & .4 \\
+    \hline
+    Total & (y_i) & (s_i) & 2605 & 1 \\
+    \hline
+    (*SD = Standard Deviation of the mean, ignoring fpc.)\\
+    \hline
+\end{tabular}
+\end{center}
+a. Estimate the mean time for the population of those giving anesthesia, with an estimated bound on the error.\\ 
+
+\begin{equation}
+    \hat{\mu} = (\hat{p_1})*(\bar{y_1}) + (\hat{p_2})*(\bar{y_2}) + (\hat{p_3})*(\bar{y_3})
+\end{equation}
+\begin{center}
+   $\hat{\mu} = (.5)*(7.63) + (.1)*(7.74) + (.4)*(6.55) = 7.209$ \\
+   The estimated mean time of those giving anesthesia is 7.2 hours. 
+\end{center}
+The estimated variance is: 
+\begin{equation}
+    \hat{V}(\bar{y_{st}}) = \frac{1}{N^2}(N_a^2 (SD_a)^2 + N_r^2 (SD_r)^2 + N_u^2 (SD_u)^2) \\
+    = (\frac{N_a}{N})^2 (SD_a)^2 + (\frac{N_r}{N})^2 (SD_r)^2 + (\frac{N_u}{N})^2 (SD_u)^2 
+\end{equation}
+\begin{center}
+   $\hat{V}(\bar{y_{st}}) = (\frac{.5}{.9})^2 (.15)^2 + (\frac{.4}{.9})^2 (.11)^2 = .009335 $\\
+   \smallskip
+   $B = 2\sqrt{.009335} = .19323561 \hspace{1cm} EB = (7.016, 7.402) $
+\end{center}
+b. Do residents have a significantly higher average than other groups? Justify your answer statistically.
+\begin{equation}
+    \bar{y_{non}} = \frac{1}{N_{non}}(N_a * \bar{y_a} + N_u * \bar{y_u}) \hspace{.25cm}
+    = (\frac{\frac{N_a}{n}}{\frac{N_{non}}{N}})\bar{y_a} + (\frac{\frac{N_a}{N}}{\frac{N_{non}}{N}})\bar{y_u} \\
+\end{equation}
+\begin{center}
+    $\bar{y_{non}} = (\frac{.5}{.9})^2 (7.63) + (\frac{.4}{.9})^2 (6.55) = 7.15 $ \\
+    \smallskip
+    $\bar{y_r} = 7.74 $\\
+    \smallskip
+    $\bar{y_d} = \bar{y_r} - \bar{y_{non}} = (7.74 - 7.15) = .59 $ 
+\end{center}
+\text{$ The difference between the \bar{y} values is .59. The estimated variance is: $} \\
+\begin{equation}
+    \hat{V}[\bar{y_{non}}] = \frac{1}{(N_{non})^2}((N_a)^2 (SD_a)^2 + (N_u)^2 (SD_u)^2) \\
+    = (\frac{N_a}{N_{non}})^2 (SD_a)^2 + (\frac{N_u}{N_{non}})^2 (SD_u)^2 \\
+\end{equation}
+\begin{center}
+    $\hat{V}(\bar{y_{non}}) = (\frac{.5}{.9})^2 (.15)^2 + (\frac{.4}{.9})^2 (.11)^2 = .009335 $
+\end{center}
+\begin{equation}
+    \hat{V}[\hat{y_d}] = \hat{V}[\bar{y_r} - \bar{y_{non}}] \\
+    = \hat{V}[\bar{y_r}] + \hat{V}[\bar{y_{non}}] \\
+\end{equation}
+\begin{center}
+    $\hat{V}[\hat{y_d}] = .1225 + .009335 = .1318$ \\
+    \smallskip
+    $B = 0.59 \pm 2* \sqrt{.1318}$ 
+    \hspace{.5cm}
+    $EB = (-.1361, 1.3161)$ \\
+    \smallskip
+    Based on the fact that 0 is in the confidence interval, the value .59 is insignificant. The residents do not have a significantly higher average than other groups, just a little bit higher. 
+\end{center}
+\section{5.46}
+Hodges et al. (1984) estimated the total number of bald eagles in a section of the British Columbia coastline. They had a Northern and Southern study area; in each, they established sub-regions of low, medium, and high eagle abundance, yielding a total of six strata. Use their data to estimate the total number of eagles in the study area, with a 95\% CI. 
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        Stratum & Stratum Size & Sample Size & Mean & SD \\
+        \hline
+        High Abundance, Northern & 136 & 9 & 5.2 & 6.78 \\ 
+        Medium Abundance, Northern & 181 & 21 & 11.6 & 10.15 \\ 
+        Low Abundance, Northern & 56 & 6 & 39.2 & 30.87 \\
+        High Abundance, Southern & 155 & 10 & 5.1 & 4.69 \\
+        Medium Abundance, Southern & 99 & 8 & 17.8 & 15.59 \\
+        Low Abundance, Southern & 38 & 7 & 40.0 & 22.96 \\
+        \hline
+        
+    \end{tabular}
+\end{center}
+Estimate $\tau$:
+\begin{equation}
+    N\bar{y_{st}} = \sum N_i \bar{y_i} 
+\end{equation}
+\begin{center}
+    $N\bar{y_{st}} = (136)(5.2) + (181)(11.6) + (56)(39.2) + (155)(5.1) + (99)(17.8) + (38)(40) = 9074.70 $ \\
+    \smallskip
+    There are 9075 estimated bald eagles on the coastline. 
+\end{center}
+Estimate Variance of $\tau$:
+\begin{equation}
+    \hat{V}[N\bar{y_{st}}] = \sum N_i^2 (1- \frac{n_i}{N_i}) (\frac{s_i^2}{n_i}) \\
+\end{equation}
+\begin{center}
+    $\hat{V}(N\bar{y_{st}}) = 136^2 (1 - \frac{9}{136}) (\frac{6.78^2}{9}) + 181^2 (1 - \frac{21}{181}) (\frac{10.15^2}{21}) + 56^2 (1 - \frac{6}{56}) (\frac{30.87^2}{6}) + 155^2 + (1 - \frac{10}{155}) (\frac{4.69^2}{10}) + 99^2 (1 - \frac{8}{99}) (\frac{15.59^2}{8}) + 38^2 (1 - \frac{7}{38}) (\frac{22.96^2}{7}) $
+    $\hat{V}(N\bar{y_{st}}) = 1,086,857.16 $\\
+    \smallskip
+    $B = 2 \sqrt{1086857.16} = 2085.05 \hspace{1cm} EB = (1084771.95, 1088942.05)$\\
+    \smallskip
+    Based on the estimations, we are 95\% confident that the true population of bald eagles on the coastline is between 1,804,772 and 1,088,943. 
+\end{center}
+\end{document}
